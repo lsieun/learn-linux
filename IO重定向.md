@@ -36,7 +36,7 @@ shell文件的描述符：
 
 	ls /usr/local/non-existfolder 2> ls-output.txt
 
-注意： `2> ls-output.txt`中的`2`和`>`蹭似乎不能有空格，否则输出成功不了。
+注意： `2> ls-output.txt`中的`2`和`>`之间似乎不能有空格，否则输出成功不了。
 
 ## 4. redirect stdout and stderror ##
 
