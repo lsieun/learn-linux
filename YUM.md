@@ -35,8 +35,9 @@ CentOS镜像使用帮助: http://mirrors.163.com/.help/centos.html
 	yum install -y openssh-clients
 	yum install -y tree
 	yum install -y telnet
+	yum install -y vim
 
-	yum install -y wget lrzsz openssh-clients tree telnet
+	yum install -y wget lrzsz openssh-clients tree telnet vim
 
 5、做快照
 
