@@ -38,6 +38,7 @@ CentOS镜像使用帮助: http://mirrors.163.com/.help/centos.html
 	yum install -y vim
 
 	yum install -y wget lrzsz openssh-clients tree telnet vim
+	yum -y install gcc gcc-c++
 
 5、做快照
 
