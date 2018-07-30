@@ -1,10 +1,18 @@
 
 
-## gvim的字符集，编码等utf-8设置 ##
+## 修改_vimrc文件 ##
 
-编码设置：`.vimrc`最后加入：
+`_vimrc`文件位于`C:\Program Files (x86)\Vim`目录，添加如下内容：
 ```
-set fileencodings=ucs-bom,utf-8,chinese,cp936
+set nocompatible
+let $LANG = 'en'  "set message language
+set langmenu=en   "set menu's language of gvim. no spaces beside '='
+set encoding=utf-8    " encoding utf8
+
+set number
+set shiftwidth=4
+set tabstop=4
+set expandtab
 ```
 
 
