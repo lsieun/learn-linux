@@ -17,6 +17,8 @@ Nautilus displays the File Browser window, which displays the contents of a fold
 
 a Command window (ALT-F2) --> `nautilus`
 
+a Command window (ALT-F2) --> `gnome-terminal`
+
 ## File ##
 
 ```
