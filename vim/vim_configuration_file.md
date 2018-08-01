@@ -21,8 +21,22 @@ Location of **local vimrc file**:
 
 | OS | Location |
 |:--:|----------|
-| UNIX/Linux | $HOME/.vimrc <br/> Example: /home/liusen/.vimrc <br/> **Note**: On Unix there is a `.` (period) before vimrc |
-| Windows | $HOME/_vimrc <br/> Example: C:\Users\liusen\_vimrc <br/>**Note**: On Windows there a `_` (underscore) before vimrc |
+| UNIX/Linux | `$HOME/.vimrc` <br/> Example: `/home/liusen/.vimrc` <br/> **Note**: On Unix there is a `.` (period) before vimrc |
+| Windows | `$HOME/_vimrc` <br/> Example: `C:\Users\liusen\_vimrc` <br/>**Note**: On Windows there a `_` (underscore) before vimrc |
+
+### Get `~/.vim` directory as variable in Vim
+
+If you type `echo $VIM` or `echo $VIMRUNTIME` in Vim you can output the directories where all the user files of Vim are located. Currently there is no built-in way to output the `~/.vim` home directory (Windows `~\.vimfiles`).
+```
+if has('win32') || has ('win64')
+    let $VIMHOME = $VIM."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+```
+Now if you type echo `$VIMHOME` you will see an output like `/home/user/.vim`.
+
+
 
 
 ## Global Vimrc
@@ -33,8 +47,8 @@ Location of **global vimrc file**:
 
 | OS | Location |
 |:--:|----------|
-| UNIX/Linux | $VIM/.vimrc <br/> Example: /usr/share/.vimrc |
-| Windows | $VIM/_vimrc <br/> Example: C:\Program Files\Vim\_vimrc |
+| UNIX/Linux | `$VIM/.vimrc` <br/> Example: `/usr/share/.vimrc` |
+| Windows | `$VIM/_vimrc` <br/> Example: `C:\Program Files\Vim\_vimrc` |
 
 
 
