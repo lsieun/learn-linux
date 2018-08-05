@@ -4,7 +4,7 @@
 
 The philosophy of Vim says that if you write a thing once, it is okay. However, if you're writing it twice or more times, then you should find a better way to do it. 
 
-> Vim的哲学是：假如有一件事情，你需要做一次，那就那样做吧；假如有一件事情，你需要做多次，你就应该找到一个更好的方法去做它。
+> Vim的哲学是：假如有一件事情，你需要做一次，那就做吧；假如有一件事情，你需要做多次，你就应该找到一个更好的方法去做它。
 
 One of the methods for getting around writing the same sentences over and over again is by using `abbreviations`.
 
@@ -46,7 +46,8 @@ Every time you realize that you will need a new abbreviation, you first execute 
 
 Getting used to adding your **abbreviations** to a file every time you find a new one might seem weird and inconvenient at first. At the end of the day, however, you will realize that it has saved you a lot of typing and that it will keep doing so. The only thing you have to do is add your abbreviations and reload the abbreviations file once in a while. 
 
-> 所谓“细大不捐”，小的大的都不抛弃，所有东西兼收并蓄。
+> 所谓“细大不捐”，小的大的都不抛弃，所有东西兼收并蓄。  
+> 聚沙成塔，集腋成裘
 
 Sometimes, it can be annoying that abbreviations automatically change when you actually wanted to write something else. Let's say that you have an abbreviation for your address called "addr", but you actually want to write the word "addressed". In that case, your abbreviation would kick in and you would not be able to write the word easily. 
 

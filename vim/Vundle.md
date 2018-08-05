@@ -74,7 +74,9 @@ filetype plugin indent on
 - `vundle#end()`: Finishes putting plugins on the rtp. 
 - `Plugin 'VundleVim/Vundle.vim'` 这里就使用了`:Plugin`命令This should always be the first.
 
-Notice how at the end, we re-establish the "filetype" functionality that we previously turned off. All plugins must be declared between the `call vundle#begin()` line and the `call vundle#end()` line.
+Notice how at the end, we re-establish the "filetype" functionality that we previously turned off. 
+
+All plugins must be declared between the `call vundle#begin()` line and the `call vundle#end()` line.
 
 Now, our `vundle` system is initialized and we can add in the plugins that we wish to manage.
 
