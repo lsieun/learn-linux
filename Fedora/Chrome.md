@@ -122,6 +122,16 @@ ln -s /usr/lib64/libbotan-2.so.7 /usr/lib64/libbotan-2.so.5
 
 原因说明：[Botan2-2.7.0 causes shadowsocks-qt5 to fail to start](https://www.bountysource.com/issues/60778061-botan2-2-7-0-causes-shadowsocks-qt5-to-fail-to-start)
 
+<!-- 
+Outline Server Singapore
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1S04wYTVFakp0b3g=@206.189.94.126:9176/?outline=1
+
+http://thetowerinfo.com/use-shadowsocks-step-by-step/
+
+https://getoutline.org/en/home
+-->
+
+
 
 ## SwitchyOmega
 
