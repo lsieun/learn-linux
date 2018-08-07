@@ -37,7 +37,13 @@ endif
 Now if you type echo `$VIMHOME` you will see an output like `/home/user/.vim`.
 
 
-
+**Pro tip**: when you’re configuring `vim`, use a `.vim` folder in your home directory with the following directory structure below (read more details [here](http://www.panozzaj.com/blog/2011/09/09/vim-directory-structure/)). Newer versions of Vim will look for the `vimrc` file in the `.vim` folder, so you can keep everything in a single folder. This allows you to make your `.vim` folder a single git repo that you can easily clone onto any computer!
+```
+.vim/
+├── colors/   <- directory for color schemes
+├── plugin/   <- directory for standard plugins
+└── vimrc     <- file with main config
+```
 
 ## Global Vimrc
 
