@@ -8,7 +8,9 @@ Settings->Devices->Keyboard->Custome Shortcuts->Add
 命令：gnome-terminal
 按键：Ctrl+Alt+t
 
-## 修改为tuna repo
+## (1)更新Fedora
+
+修改为tuna repo
 
 https://mirrors.tuna.tsinghua.edu.cn/help/fedora/
 
@@ -44,6 +46,50 @@ skip_if_unavailable=False
 sudo dnf update
 ```
 
+## (2) Add RPM repo
+
+网址：https://rpmfusion.org/Configuration#Installing_Free_and_Nonfree_Repositories
+
+```
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+## (3) 安装插件
+
+Sotfware-->Add-ons
+
+安装
+
+- GStreamer Multimedia Codecs-H.264插件
+- GStreamer Multimedia Codecs-libav
+- GStreamer Multimedia Codecs-License Issues
+- GStreamer Multimedia Codecs-Non Free
+
+
+下面这个是Fedora不自带的，需要手动安装：
+
+OpenH264: https://fedoraproject.org/wiki/OpenH264
+
+```
+$ sudo dnf config-manager --set-enabled fedora-cisco-openh264
+
+$ sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264
+```
+
+## (4) 安装gnome-tweaks-tool
+
+```
+sudo dnf install gnome-tweaks
+```
+
+## (5) wine
+
+```
+sudo dnf install wine
+```
+
+https://www.winehq.org/
+
 ## 安装五笔
 
 ```
@@ -54,11 +100,7 @@ sudo dnf install ibus*wubi*
 
 在Settings->Region & Language -> Input Sources中添加极点五笔。之后，输入法就会出现在右上角了。
 
-## 安装gnome-tweaks-tool
 
-```
-sudo dnf install gnome-tweaks
-```
 
 ## 安装右键菜单Open in Terminal
 

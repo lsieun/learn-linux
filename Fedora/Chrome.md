@@ -126,6 +126,19 @@ ln -s /usr/lib64/libbotan-2.so.7 /usr/lib64/libbotan-2.so.5
 Outline Server Singapore
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1S04wYTVFakp0b3g=@206.189.94.126:9176/?outline=1
 
+
+
+```json
+    {
+        "method": "chacha20-ietf-poly1305",
+        "password": "uKN0a5EjJtox",
+        "remarks": "OutlineServer",
+        "server": "206.189.94.126",
+        "server_port": 9176
+    }
+```
+
+
 http://thetowerinfo.com/use-shadowsocks-step-by-step/
 
 https://getoutline.org/en/home
@@ -142,3 +155,6 @@ https://getoutline.org/en/home
 https://blog.huihut.com/2017/08/25/LinuxInstallConfigShadowsocksClient/
 ```
 
+## SSR地址自动获取
+
+https://github.com/PangPangpeng/-SSR-
