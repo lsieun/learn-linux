@@ -20,6 +20,7 @@ But after:
     :let mapleader = ","
 
 It works like:
+
     :map ,A  oanother line <Esc>
 
 **Note** that the value of "`mapleader`" is used at the moment the mapping is defined.  Changing "`mapleader`" after that has no effect for already defined mappings.
@@ -28,6 +29,6 @@ Be aware that when you do press your `<leader>` key you have only **1000ms** (by
 
 This is exacerbated because there is no visual feedback (by default) that you have pressed your `<leader>` key and vim is awaiting the command; and so there is also no visual way to know when this time out has happened.
 
-If you add `set showcmd` to your vimrc then you will see your `<leader>` key appear in the bottom right hand corner of vim (to the left of the cursor location) and perhaps more importantly you will see it disappear when the time out happens.
+If you add `set showcmd` to your `vimrc` then you will see your `<leader>` key appear in the bottom right hand corner of vim (to the left of the cursor location) and perhaps more importantly you will see it disappear when the time out happens.
 
 The length of the timeout can also be set in your vimrc, see `:help timeoutlen` for more information.
