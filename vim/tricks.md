@@ -1,4 +1,39 @@
 
+## Turn On Relative Line Numbers
+
+```
+:set relativenumber
+
+```
+
+`:set rnu` to turn on relative numbers and `:set nornu` to turn off the same.
+
+
+## Write a file if you forget to sudo before starting vim
+This command will save the open file with `sudo` rights
+
+```
+:w !sudo tee % >/dev/null
+```
+
+You can also map `w!!` to write out a file as root
+
+```
+:cnoremap w!! w !sudo tee % >/dev/null
+```
+
+## Know the path of the file you are editing
+
+```
+:pwd
+```
+
+## Open source of any URL
+
+```
+$ vim 'https://codingdash.com/'
+```
+
 # 对行进行排序
 
 ```
