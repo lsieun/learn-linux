@@ -1,3 +1,9 @@
+# Plugins
+
+- powerline
+- YouCompleteMe
+- NERDTree
 
 
-## Plug-ins
+
+
