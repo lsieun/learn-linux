@@ -56,3 +56,20 @@ Using some **autocommands**, Vim can switch between line number modes automatica
 ```
 
 In this example, both absolute and relative line numbers are enabled by default, which produces “hybrid” line numbers. When entering **insert mode**, **relative line numbers** are turned off, leaving **absolute line numbers** turned on. This also happens when the buffer loses focus, so you can glance back at it to see which absolute line you were working on if you need to.
+
+## toggle the line number counting method
+
+```vim
+" use Ctrl+N to toggle the line number counting method
+function! g:ToggleNuMode()
+  if &relativenumber == 1
+     set number
+     set norelativenumber
+  else
+     set relativenumber
+     set nonumber
+  endif
+endfunction
+nnoremap <silent><C-N> :call g:ToggleNuMode()<cr>
+
+```
