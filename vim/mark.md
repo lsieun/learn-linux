@@ -6,7 +6,7 @@ The strength of Vim’s basic movement commands are immediately apparent. We can
 
 Today, we’re going to briefly cover a poweful motion strategy: `mark` motion.
 
-## What is a Mark?
+## 1、What is a Mark?
 
 **Marks** are essentially **hidden positions** that, when set, allow us to jump back to that specific location or line. What we mean by **hidden** is that these marks are **not visible by default**; marks are simply invisible points within a file.
 
@@ -43,49 +43,49 @@ Here is Line 5
 7. We are now at the beginning of Line `#3`!
 
 
-## Jumps, Marks and a Few Commands
+## 2、Jumps, Marks and a Few Commands
 
 We know how to set a mark with `m`, but let’s clarify the **two types of mark jumps** and the different types of marks.
 
-## Two Types of Mark Jumps
+### 2.1、Two Types of Mark Jumps
 
-### BACKTICK
+#### BACKTICK
 `` `<mark>`` - **The backtick** places our cursor directly on the mark.
 
-### SINGLE QUOTE
+#### SINGLE QUOTE
 `'<mark>` - **The single quote** takes us to **the first non-blank character** of the mark’s line.
 
 
-## Three Types of Marks
+### 2.2、Three Types of Marks
 
-### LOWERCASE MARKS
+#### LOWERCASE MARKS
 
 **a - z** - These marks preserve locations within **a single file**. Each individual file possesses 26 settable lowercase marks. Lowercase marks are valid as long as the file remains in the buffer list. Furthermore, lowercase marks can be combined with other operators. For example, `` c`n ``, will change everything between the cursor to the mark `n`.
 
-### UPPERCASE MARKS
+#### UPPERCASE MARKS
 
 **A - Z** - These marks preserve locations within **multiple files**. Also known as **file marks**. These marks, which are shared among all files within the buffer list, can be used to jump from file to file. File marks can only be used in combination with operators if the mark is in the current file, i.e. when the current file opened contains the global file mark.
 
-### NUMBERED MARKS
+#### NUMBERED MARKS
 
 **0 - 9** - Numbered marks cannot be set directly, instead they are created automagically and used by the **viminfo-file** (`:help viminfo-file`). Essentially, the numbered marks store the location of your cursor after closing Vim. For example, mark `0` returns the position of the cursor during your last Vim session, while mark `1` returns the next to last Vim session, and so forth.
 
-## Some Pertinent(相关的) Commands
+### 2.3、Some Pertinent(相关的) Commands
 
-### VIEWING CURRENT MARKS
+#### VIEWING CURRENT MARKS
 
 `:marks {argument}` - `:marks` will show you all current marks, their file location and destination marker. We can pass in an argument to view a range of marks between two marks.
 
 - `:marks aC` - will return all marks that are between `a` and `C`.
 
-### DELETING MARKS
+#### DELETING MARKS
 
 `:delm[arks] {marks}` - We can use `:delm` or `:delmarks` and then pass in marks that we want to delete.
 
 - `:delm aAbB` - will delete marks labeled `a`, `A`, `b` and `B`.
 
 
-## Okay, What’s So Cool About Marks?
+## 3、Okay, What’s So Cool About Marks?
 
 Marks can speed up our navigation workflow! Here are a few examples:
 

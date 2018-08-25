@@ -2,11 +2,11 @@
 
 URL:https://dockyard.com/blog/2015/02/04/vim-jump-jump-jump
 
-## File Jumps
+## 1、File Jumps
 
 **File jumps** will navigate you to a location **within the current file**, regardless if that location is seen or not seen within the window.
 
-### AIN’T NO MOUNTAIN HIGH ENOUGH, AIN’T NO VALLEY LOW ENOUGH…
+### 1.1、AIN’T NO MOUNTAIN HIGH ENOUGH, AIN’T NO VALLEY LOW ENOUGH…
 
 - `gg` : Will take you to the top of the file.
 - `G`  : Will take you to the bottom of the file.
@@ -24,7 +24,7 @@ Ain't no valley low enough, ain't no river wide enough
 To keep me from getting to you, baby
 ```
 
-### SENTENCES AND PARAGRAPHS
+### 1.2、SENTENCES AND PARAGRAPHS
 
 - `(`: Move a sentence backwards, can take a prefix argument.
     - `5(` - Navigates you 5 sentences backwards.
@@ -35,7 +35,7 @@ To keep me from getting to you, baby
 - `}` : Move a paragraph forward, can take a prefix argument.
     - `5}` - Navigates you 5 paragraphs forwards.
 
-### SEARCH AND DESTROY
+### 1.3、SEARCH AND DESTROY
 
 - `/` : Allows you to search forwards for a desired pattern within the file.
     - `/fishsticks` - Searches for all occurences of fishsticks ahead of your current cursor.
@@ -45,24 +45,24 @@ To keep me from getting to you, baby
 - `N` : Repeats the last `/` or `?` search in the opposite direction.
 
 
-## Window Jumps
+## 2、Window Jumps
 
 **Window jumps** allow you to move within **the current scope of the window** or **viewport**.
 
-### HIGH, MIDDLE, AND LOW
+### 2.1、HIGH, MIDDLE, AND LOW
 
 - `H` : Jumps your cursor to the highest line of the window.
 - `M` : Jumps your cursor to the middle line of the window.
 - `L` : Jumps your cursor to the lowest line of the window.
 
 
-## System Wide Jumps
+## 3、System Wide Jumps
 
 **System jumps** are special; they have the ability to take us to any previously visited file, regardless if those files are or are not within the same directory.
 
 This is where jump motion really shines!
 
-### JUMP AROUND
+### 3.1、JUMP AROUND
 
 Give these next commands a try:
 
@@ -71,7 +71,7 @@ Give these next commands a try:
 
 By pressing these commands repeatedly, you’ll see that you are traversing through your recently visited files.
 
-### JUMP LIST
+### 3.2、JUMP LIST
 
 Our recent jumps are stored on our jump list. We can view all the jumps through Vim’s command-line mode. There are three ways to open up the jump list.
 

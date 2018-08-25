@@ -90,6 +90,12 @@ sudo dnf install wine
 
 https://www.winehq.org/
 
+## 安装focuswriter
+
+```
+sudo dnf install focuswriter
+```
+
 ## 安装五笔
 
 ```
