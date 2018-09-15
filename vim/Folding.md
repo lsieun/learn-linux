@@ -19,6 +19,7 @@ After this setting, your code will be folded based on the indentation.
 | zM        | Fold everything back again       |
 
 
+type `zx` or `zX` to update the folds.
 
 ## Manual Folding
 
