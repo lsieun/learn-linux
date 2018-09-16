@@ -54,4 +54,22 @@ http://eclim.org/vim/code_completion.html
 Plugin 'file:///home/liusen/.vim/bundle/eclim/eclim'
 ```
 
+## Getting Started
+
+URL: http://eclim.org/gettingstarted.html
+
+
+## Maven Users
+
+URL: http://eclim.org/gettingstarted.html#maven-users
+
+
+## Other
+
+http://eclim.org/vim/java/index.html
+
+http://eclim.org/vim/java/classpath.html
+
+http://eclim.org/vim/core/project.html#projectcreate
+
 

@@ -8,4 +8,9 @@ When I'm done editing a Python script, I just press `<F5>`. The script is saved 
 nnoremap <F5> <Esc>:update<CR>:!clear;python %<CR>
 ```
 
+我的进一步修改：
+
+```vim
+nnoremap <F5> <Esc>:update<CR>:!clear;echo "$ python %";printf "\n";python %<CR>
+```
 
