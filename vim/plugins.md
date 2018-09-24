@@ -1,9 +1,0 @@
-# Plugins
-
-- powerline
-- YouCompleteMe
-- NERDTree
-
-
-
-
