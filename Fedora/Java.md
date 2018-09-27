@@ -67,3 +67,17 @@ And the output will display:
 ```txt
 Hello Fedora!
 ```
+
+## error: package javafx.application does not exist
+
+URL: https://coderanch.com/t/669860/java/javafx-packages-java-Fedora-Gnu
+
+JavaFX is not included in the Fedora Linux version of OpenJDK. 
+
+To install everything, just run 
+
+```bash
+dnf install javafx-devel
+```
+
+

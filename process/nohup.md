@@ -1,4 +1,4 @@
-# nohub
+# nohup
 
 **Nohup** stands for **no hang up**, which can be executed as shown below.
 
