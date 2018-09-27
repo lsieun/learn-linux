@@ -274,3 +274,45 @@ Restart `firewalld.service`
 systemctl restart firewalld.service
 ```
 
+## 7. Error: "mysqld.service - SYSV: MySQL database server"
+
+URL: https://stackoverflow.com/questions/42317139/job-for-mysqld-service-failed-see-systemctl-status-mysqld-service
+
+
+1, Check the log file `/var/log/mysqld.log`
+
+```
+2017-03-14T07:06:53.374603Z 0 [ERROR] /usr/sbin/mysqld: Can't create/write to file '/var/run/mysqld/mysqld.pid' (Errcode: 2 - No such file or directory)
+2017-03-14T07:06:53.374614Z 0 [ERROR] Can't start server: can't create PID file: No such file or directory
+```
+
+The log says that there isn't a file or directory `/var/run/mysqld/mysqld.pid`
+
+2, Create the directory `/var/run/mysqld`
+
+```bash
+mkdir -p /var/run/mysqld/
+```
+
+3, Start the mysqld again `service mysqld start`, but still fail, check the log again `/var/log/mysqld.log`
+
+```txt
+2017-03-14T07:14:22.967667Z 0 [ERROR] /usr/sbin/mysqld: Can't create/write to file '/var/run/mysqld/mysqld.pid' (Errcode: 13 - Permission denied)
+2017-03-14T07:14:22.967678Z 0 [ERROR] Can't start server: can't create PID file: Permission denied
+```
+
+It saids permission denied.
+
+4, Grant the permission to `mysql` 
+
+```bash
+sudo chown mysql.mysql /var/run/mysqld/
+```
+
+5, Restart the mysqld
+
+```bash
+$ sudo service mysqld restart
+Restarting mysqld (via systemctl):                         [  OK  ]
+```
+
