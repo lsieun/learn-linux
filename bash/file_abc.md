@@ -172,3 +172,5 @@ pom.xml: XML 1.0 document, UTF-8 Unicode text
 $ file README.md    # markdown
 README.md: UTF-8 Unicode text
 ```
+
+> 人越是不了解自己，他对外面的世界就越是有好奇心。好奇心是一种逃避，它是我们对自己本质无知的最大逃避。——张方宇《单独中的洞见》

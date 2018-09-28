@@ -14,6 +14,23 @@ ls command options:
 -t, --time 按修改时间排序（默认按修改时间倒序排序，可以和 -r 一起使用，从而按修改时间正序显示）
 ```
 
+## 0.基本语法
+
+命令行的语法（基本格式）：
+
+```bash
+#命令本身 -选项 参数
+#ls     -l       /usr/
+command -options arguments
+```
+
+其中，`options`又分为`short options`和`long options`
+
+- short options: `-a`
+- long  options: `--all`
+
+> 对于一般的命令来说，通常都有成对的short options和long options，其中long options是完整的单词，而short options是该单词中的一个字母（往往是首字母）。对于short options，可以进行合并，例如`ls -a -l`可以合并写成`ls -al`。
+
 ## 1. 查看目录内容
 
 ```bash
@@ -53,3 +70,5 @@ ls -d /usr/              #short options
 ls --directory /usr/     #long  options
 ls -dl /usr/             #查看详细的目录信息
 ```
+
+> 择善人而交, 择善书而读, 择善言而听, 择善行而从。
