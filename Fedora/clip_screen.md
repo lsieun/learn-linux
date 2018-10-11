@@ -14,3 +14,23 @@ Shift+PrtSc(reen)
 /home/<user>/Pictures
 ```
 
+```bash
+man gnome-screenshot
+```
+
+NOW=$(date +"%Y%m%d%H%M%S")
+FILE="${NOW}.png"
+gnome-screenshot -af ${FILE}
+echo ${FILE}
+
+NOW=$(date +"%Y%m%d%H%M%S") && FILE="${NOW}.png" && gnome-screenshot -af ${FILE} && echo ${FILE}
+
+alias shot="NOW=$(date +\"%Y%m%d%H%M%S\") && FILE=\"${NOW}.png\" && gnome-screenshot -af ${FILE} && echo ${FILE}"
+
+```bash
+#!/bin/bash
+NOW=$(date +"%Y%m%d%H%M%S")
+FILE="${NOW}.png"
+echo ${FILE}
+gnome-screenshot -af ${FILE}
+```
