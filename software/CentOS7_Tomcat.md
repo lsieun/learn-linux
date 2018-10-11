@@ -118,13 +118,14 @@ sudo systemctl enable haveged.service
 Now, start the Apache Tomcat service and set it run on system boot:
 
 ```bash
+sudo systemctl daemon-reload
 sudo systemctl start tomcat.service
 sudo systemctl enable tomcat.service
 ```
 
 In order to test Apache Tomcat in a web browser, you need to modify the firewall rules:
 
-```
+```bash
 sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
 sudo firewall-cmd --reload
 ```
