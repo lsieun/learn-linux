@@ -1,7 +1,14 @@
 
 # file
 
-[TOC]
+<!-- TOC -->
+
+- [file](#file)
+    - [1. Linux文件类型](#1-linux文件类型)
+    - [2. Linux文件时间](#2-linux文件时间)
+    - [3. file命令](#3-file命令)
+
+<!-- /TOC -->
 
 ## 1. Linux文件类型
 

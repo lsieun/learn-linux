@@ -11,6 +11,21 @@
 - 用户和用户组
 - 文件大小
 
+<!-- TOC -->
+
+- [find](#find)
+    - [1. 文件名查找](#1-文件名查找)
+    - [2. 文件类型查找](#2-文件类型查找)
+    - [3. 逻辑（或、非）查询](#3-逻辑或非查询)
+    - [4. 按时间查询](#4-按时间查询)
+    - [5. 根据属主和属组查询](#5-根据属主和属组查询)
+        - [5.1 用户名和用户组查询](#51-用户名和用户组查询)
+        - [5.2 用户ID和用户组ID查询](#52-用户id和用户组id查询)
+    - [6. 根据文件大小查询](#6-根据文件大小查询)
+    - [7. Examples](#7-examples)
+
+<!-- /TOC -->
+
 ## 1. 文件名查找
 
 按**文件名**查找，默认查找当前目录，命令如下：
@@ -24,18 +39,26 @@ find /tmp -name "a*"      # 在/tmp目录查找
 按**文件类型**查找，命令如下：
 
 ```bash
-find /tmp -name "a*" -type f           # 查找以a开头的文件（注意：类型是文件）
-find /tmp -name "a*" -type s           # 查找以a开头的套接字
+find . -type f    # To find all files in a location
+find . -type d    # To find all directories in a location
 ```
 
 ## 3. 逻辑（或、非）查询
 
 使用逻辑“或”、“非”
 
-```
+```bash
 find /tmp -name "a*" -o -name "b*"     # 查找以a开头或b开头的文件或目录（逻辑“或”）
 find /tmp -name "a*" ! -type f         # 查找以a开头的非文件（逻辑“非”）
 ```
+
+注意，默认情况下就是“且”，例如：
+
+```bash
+find /tmp -name "a*" -type f           # 查找以a开头的文件（注意：类型是文件）
+find /tmp -name "a*" -type s           # 查找以a开头的套接字
+```
+
 ## 4. 按时间查询
 
 Hi, Hi, Hi!!!`find`命令可以根据三种访问时间来查找
@@ -125,3 +148,30 @@ More Example: 拿着`find`命令到处敲敲打打
 find /home -size -25k ! -empty
 find /home -size -25k ! -empty -type f
 ```
+
+## 7. Examples
+
+Count
+
+```bash
+find . -type f | wc -l    # To find the number of files in a location
+find . -type f | grep "jpg" | wc -l    # To find the number of "jpg" files in a location
+```
+
+To find files of size between 1 MB and 2 MB in a location:
+
+```bash
+find . -type f -size +1M -size -2M
+```
+
+
+copy all files of size between 1 and 2 MB to another location
+
+```bash
+find . -type f -size +1M -size -2M -exec cp {} ~/my_files/ \;
+```
+
+Here `{}` contains the results of the `find`. The last `;` is also required and **has to be escaped**.
+
+
+
