@@ -52,7 +52,9 @@ dnf install shadowsocks-libev
 
 ### 配置Shadowsocks-libev
 
-打开网址：http://free-ss.tk/
+打开网址：https://free-ss.site/
+
+
 
 ```
 vi /etc/shadowsocks-libev/config.json
