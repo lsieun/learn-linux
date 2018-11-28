@@ -42,4 +42,5 @@ For example: Japan #178.
 
 ```bash
 $ sudo openvpn ca457.nordvpn.com.tcp.ovpn
+$ sudo openvpn nl375.nordvpn.com.tcp.ovpn
 ```
