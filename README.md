@@ -20,5 +20,7 @@ There is also uncommon `{}` brackets used which from my search is for a required
 
 "`{}`" are used in conjunction with **a vertical bar** to indicate cases where exactly one of the specified options may be used
 
+## Other
 
+A key element of the Unix philosophy being “Do One Thing and Do It Well“.
 
