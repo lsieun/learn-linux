@@ -34,3 +34,7 @@ FILE="${NOW}.png"
 echo ${FILE}
 gnome-screenshot -af ${FILE}
 ```
+
+```bash
+alias shot="sh ~/Software/screenshot.sh"
+```
