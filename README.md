@@ -4,6 +4,7 @@
 学习网站：
 
 - https://alvinalexander.com/unix/?q=unix&page=1
+- https://www.systutorials.com/
 
 
 ## command syntax conventions
