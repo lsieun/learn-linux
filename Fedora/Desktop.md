@@ -92,5 +92,62 @@ Terminal=false
 - `%k`: a URI or local filename of the location of the desktop file.
 - `%v`: the name of the Device entry.
 
+## MyExamples
 
+File Name: `jetbrains-idea.desktop`
 
+```txt
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Ultimate Edition
+Icon=/home/liusen/Softwares/Jetbrains/idea/bin/idea.svg
+Exec="/home/liusen/Softwares/Jetbrains/idea/bin/idea.sh" %f
+Comment=Capable and Ergonomic IDE for JVM
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-idea
+```
+
+File Name: `jetbrains-pycharm.desktop`
+
+```txt
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Pycharm
+Icon=/home/liusen/Softwares/Jetbrains/pycharm/bin/pycharm.svg
+Exec="/home/liusen/Softwares/Jetbrains/pycharm/bin/pycharm.sh" %f
+Comment=Pycharm
+Categories=Development;IDE;
+Terminal=false
+```
+
+File Name: `jetbrains-datagrip.desktop`
+
+```txt
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Datagrip
+Icon=/home/liusen/Softwares/Jetbrains/datagrip/bin/datagrip.svg
+Exec="/home/liusen/Softwares/Jetbrains/datagrip/bin/datagrip.sh" %f
+Comment=Datagrip
+Categories=Development;IDE;
+Terminal=false
+```
+
+File Name: `jetbrains-webstorm.desktop`
+
+```txt
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WebStorm
+Icon=/home/liusen/Softwares/Jetbrains/webstorm/bin/webstorm.svg
+Exec="/home/liusen/Softwares/Jetbrains/webstorm/bin/webstorm.sh" %f
+Comment=The smartest JavaScript IDE
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-webstorm
+```

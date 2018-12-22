@@ -96,7 +96,7 @@ mysql  Ver 14.14 Distrib 5.7.23, for Linux (x86_64) using  EditLine wrapper
 ### 2.4 autostart MySQL on boot
 
 ```bash
-systemctl enable mysqld.service
+$ sudo systemctl enable mysqld.service
 ```
 
 ## 3. 修改MySQL的密码
@@ -261,17 +261,17 @@ mysql> FLUSH PRIVILEGES;
 Add New Rule to Firewalld
 
 ```bash
-firewall-cmd --permanent --zone=public --add-service=mysql
+sudo firewall-cmd --permanent --zone=public --add-service=mysql
 
 ## OR ##
 
-firewall-cmd --permanent --zone=public --add-port=3306/tcp
+sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp
 ```
 
 Restart `firewalld.service`
 
-```
-systemctl restart firewalld.service
+```bash
+sudo systemctl restart firewalld.service
 ```
 
 ## 7. Error: "mysqld.service - SYSV: MySQL database server"
@@ -281,7 +281,7 @@ URL: https://stackoverflow.com/questions/42317139/job-for-mysqld-service-failed-
 
 1, Check the log file `/var/log/mysqld.log`
 
-```
+```txt
 2017-03-14T07:06:53.374603Z 0 [ERROR] /usr/sbin/mysqld: Can't create/write to file '/var/run/mysqld/mysqld.pid' (Errcode: 2 - No such file or directory)
 2017-03-14T07:06:53.374614Z 0 [ERROR] Can't start server: can't create PID file: No such file or directory
 ```

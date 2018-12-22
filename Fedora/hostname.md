@@ -1,9 +1,17 @@
 # How to set the hostname on Fedora
 
+<!-- TOC -->
+
+- [How to set the hostname on Fedora](#how-to-set-the-hostname-on-fedora)
+  - [1. Hostname conventions](#1-hostname-conventions)
+  - [2. Setting the hostname](#2-setting-the-hostname)
+  - [3. Getting fancy](#3-getting-fancy)
+
+<!-- /TOC -->
 
 ## 1. Hostname conventions
 
-To be valid, a hostname may only contain **letters a-z**, **numerals 0-9**, and **dashes (-)**. 
+To be valid, a hostname may only contain **letters a-z**, **numerals 0-9**, and **dashes (-)**.
 
 An example is `office-01`. The `FQDN` for that machine might be **office-01.example.com**, where **example.com** is the domain.
 
