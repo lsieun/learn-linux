@@ -3,7 +3,8 @@
 [TOC]
 
 ```bash
-$ bash --version
+echo $SHELL
+bash --version
 ```
 
 ## 1. Working With Processes

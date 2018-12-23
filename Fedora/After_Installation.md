@@ -20,6 +20,8 @@
     - [7.1. 安装五笔](#71-安装五笔)
     - [7.2. 安装下载工具UGET](#72-安装下载工具uget)
     - [7.3. 安装插件](#73-安装插件)
+- [Improve battery life and reduce overheating](#improve-battery-life-and-reduce-overheating)
+- [Save your eyes at night with Redshift](#save-your-eyes-at-night-with-redshift)
 
 <!-- /TOC -->
 
@@ -227,3 +229,27 @@ $ sudo dnf config-manager --set-enabled fedora-cisco-openh264
 
 $ sudo dnf install gstreamer1-plugin-openh264 mozilla-openh264
 ```
+
+## Improve battery life and reduce overheating
+
+I have written in detail about the [best practices to reduce overheating in Linux laptops](https://itsfoss.com/reduce-overheating-laptops-linux/). **TLP** is my favorite tool in recent times. You install it once and you will see its impact almost immediately. Install it and forget it, no need to bother with configuration, not because you cannot do it, more because you don’t need it. I believe that it should be installed by default in all Linux distributions.
+
+To install TLP in Fedora, use the following command:
+
+```bash
+sudo dnf install tlp
+```
+
+## Save your eyes at night with Redshift
+
+A lot has been discussed about the impact ‘blue light’ makes on our sleeping habit lately. It’s not a secret that computer screens are not the best friend of our eyes, especially at nights in non-natural lights.
+
+For this reason, there are applications that reduce the blue light and provide a more eyes-friendly orange or red screen. [Redshift](http://jonls.dk/redshift/) is one such application that you must install if you use your computer at night. Use the command below to install Redshift
+
+```bash
+sudo dnf install redshift
+```
+
+There is no configuration needed. It determines your location and automatically turns your screen red-ish after sunset. If you need more features and configuration, try `f.lux`. Read this article about [using f.lux to get night shift feature in Linux](https://itsfoss.com/night-shift-flux-ubuntu-linux/).
+
+
