@@ -211,6 +211,8 @@ sudo dnf install uget
 
 ### 7.3. 安装插件
 
+播放视频Mp4
+
 Sotfware-->Add-ons
 
 安装

@@ -6,6 +6,15 @@
 - https://alvinalexander.com/unix/?q=unix&page=1
 - https://www.systutorials.com/
 
+## ISO Download
+
+- [ ] [清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/)
+- [ ] [网易开源镜像站](http://mirrors.163.com/) ([使用帮助](http://mirrors.163.com/.help/))
+- [ ] [搜狐开源镜像站](http://mirrors.sohu.com/)
+- [ ] [首都在线科技股份有限公司](http://mirrors.yun-idc.com/)
+- [ ] [北京理工大学开源软件镜像](http://mirror.bit.edu.cn/web/)
+
+
 
 ## command syntax conventions
 

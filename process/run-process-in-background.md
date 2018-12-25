@@ -6,19 +6,33 @@ URL:
 
 If you’re like me and you started to hate clicking icons to launch projects, you start them from the shell. 
 
+> Terminal -> Start Process
+
 When you start the process this way, you’ll see the shell waits (blocks) until the program finishes or is terminated.
+
+> 正常情况下：如果你的Program一直运行，那么Terminal就一直等待；直到Program运行结束，Terminal才能接受新的命令。
 
 If you close the terminal you will be prompted by the terminal: “There is still a process running in this terminal. Closing the terminal will kill it”. You can cancel or close the terminal. This is because the process your started inherits some things from the shell (stdin, stdout, etc) . This makes that the process is bound to that terminal.
 
+> 如果你要关闭Terminal，会发生什么情况呢？
+
 When you close your terminal, **the shell** receives a `SIGHUP`, it also sends a `SIGHUP` to **the process** you started, this will end the process.
 
+> 如果关闭Terminal，那么Process也将退出。
+
 Let’s assume you don’t want to kill the process, but you don’t need or want this terminal anymore. Or you want to continue using the terminal for other tasks.
+
+> 如果你想让Terminal和Process脱离关系，那么如何操作呢？
 
 ## 1. Adding the ‘`&`’ to your command
 
 In the case of `vlc &` **the process** moves to the background and you can continue to use **the terminal** as you see it. You are You get a shell prompt again. Often I just continue from there or clear the terminal and use it for other tasks or starting different processes.
 
 If you **close the terminal** by pressing **the close button** (`x`) with the mouse or `Shift+Ctrl+W`, then it will **stop all the processes** you started in **that terminal**. This is more or less the same problem as before, but this time the terminal doesn’t prompt you to do so, it just kills the program(s) immediately.
+
+> 这种方式，还是会退出  
+>
+> 下面的方式，不会退出
 
 If you type the `exit` command in the terminal or close with the `Ctrl+D` shortcut it will close the terminal, but the running processes will stay up. This was the first solution I tried. I still use it quite often, but there are others. Some have other benefits or give you more options if needed.
 
