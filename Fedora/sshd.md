@@ -8,6 +8,6 @@ Install openssh-server and open port.
 $ sudo dnf install -y openssh-server
 $ sudo systemctl enable sshd
 $ sudo systemctl restart sshd
-$ sudo firewall-cmd --add-service=ssh --permanent
+$ sudo firewall-cmd --permanent --add-service=ssh
 $ sudo firewall-cmd --reload
 ```

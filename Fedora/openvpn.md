@@ -44,3 +44,6 @@ For example: Japan #178.
 $ sudo openvpn ca457.nordvpn.com.tcp.ovpn
 $ sudo openvpn nl375.nordvpn.com.tcp.ovpn
 ```
+
+To get started, type 'nordvpn login' and enter your NordVPN account details. Then type 'nordvpn connect' and you’re all set! If you need help using the app, use the command 'nordvpn --help'.
+

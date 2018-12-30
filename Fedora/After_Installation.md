@@ -201,6 +201,16 @@ sudo dnf install ibus-table-chinese-wubi-jidian
 
 在Settings->Region & Language -> Input Sources中添加极点五笔。之后，输入法就会出现在右上角了。
 
+```bash
+sudo dnf remove ibus
+sudo dnf install im-chooser
+sudo dnf install fcitx
+sudo dnf install fcitx-configtool
+sudo dnf install sunpinyin
+sudo dnf install fcitx-sunpinyin
+```
+
+
 ### 7.2. 安装下载工具UGET
 
 ```bash
