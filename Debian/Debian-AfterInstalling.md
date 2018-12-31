@@ -9,7 +9,11 @@ URL: [debian 9 安装后需做的几件事](https://www.cnblogs.com/OneFri/p/830
 Linux 下有两大输入法框架：ibus 和fcitx，其中fcitx 的体验要比ibus 好，因此选择fcitx 框架，并安装搜狗输入法。
 
 ```bash
-sudo apt-get install fcitx
+# 删除ibus
+sudo apt purge ibus
+
+sudo apt install im-config
+sudo apt install fcitx
 sudo apt-get install fcitx-config-gtk
 sudo apt-get install fcitx-table-wbpy
 sudo apt-get install fcitx-ui-light

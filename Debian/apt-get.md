@@ -4,30 +4,29 @@ URL: [Using apt-get Commands In Linux](https://itsfoss.com/apt-get-linux-guide/)
 
 **Brief**: This beginner’s guide shows you what you can do with `apt-get` commands in Linux, how to use it to find new packages, install and upgrade new packages and clean your system.
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 -->
 
 - [Using apt-get Commands In Linux](#using-apt-get-commands-in-linux)
   - [1. What is `apt-get`](#1-what-is-apt-get)
-  - [2. Using `apt-get` commands](#2-using-apt-get-commands)
-    - [2.1. Update & Upgrade](#21-update--upgrade)
-      - [2.1.1. Update package database with apt-get](#211-update-package-database-with-apt-get)
-      - [2.1.2. Upgrade installed packages with apt-get](#212-upgrade-installed-packages-with-apt-get)
-      - [2.1.3. Difference between upgrade and dist-upgrade](#213-difference-between-upgrade-and-dist-upgrade)
-      - [2.1.4. What is the difference between apt-get update and apt-get upgrade?](#214-what-is-the-difference-between-apt-get-update-and-apt-get-upgrade)
-    - [2.2. Search](#22-search)
-      - [2.2.1. Using `apt-cache` commands to search for packages](#221-using-apt-cache-commands-to-search-for-packages)
-    - [2.3. Install](#23-install)
-      - [2.3.1. How to install new packages with apt-get](#231-how-to-install-new-packages-with-apt-get)
-      - [2.3.2. How to install multiple packages](#232-how-to-install-multiple-packages)
-      - [2.3.3. What if you run `install` on an already installed package](#233-what-if-you-run-install-on-an-already-installed-package)
-      - [2.3.4. How to install packages without upgrading](#234-how-to-install-packages-without-upgrading)
-      - [2.3.5. How to only upgrade packages, not install it](#235-how-to-only-upgrade-packages-not-install-it)
-      - [2.3.6. How to install a specific version of an application](#236-how-to-install-a-specific-version-of-an-application)
-    - [2.4. Remove](#24-remove)
-      - [2.4.1. How to remove installed packages with apt-get](#241-how-to-remove-installed-packages-with-apt-get)
-      - [2.4.2. What is the difference between `apt-get remove` and `apt-get purge`?](#242-what-is-the-difference-between-apt-get-remove-and-apt-get-purge)
-    - [2.5. Clean](#25-clean)
-      - [2.5.1. How to clean your system with apt-get](#251-how-to-clean-your-system-with-apt-get)
+  - [2. Update & Upgrade](#2-update--upgrade)
+    - [2.1. Update package database with apt-get](#21-update-package-database-with-apt-get)
+    - [2.2. Upgrade installed packages with apt-get](#22-upgrade-installed-packages-with-apt-get)
+    - [2.3. Difference between upgrade and dist-upgrade](#23-difference-between-upgrade-and-dist-upgrade)
+    - [2.4. What is the difference between apt-get update and apt-get upgrade?](#24-what-is-the-difference-between-apt-get-update-and-apt-get-upgrade)
+  - [3. Search](#3-search)
+    - [3.1. Using `apt-cache` commands to search for packages](#31-using-apt-cache-commands-to-search-for-packages)
+  - [4. Install](#4-install)
+    - [4.1. How to install new packages with apt-get](#41-how-to-install-new-packages-with-apt-get)
+    - [4.2. How to install multiple packages](#42-how-to-install-multiple-packages)
+    - [4.3. What if you run `install` on an already installed package](#43-what-if-you-run-install-on-an-already-installed-package)
+    - [4.4. How to install packages without upgrading](#44-how-to-install-packages-without-upgrading)
+    - [4.5. How to only upgrade packages, not install it](#45-how-to-only-upgrade-packages-not-install-it)
+    - [4.6. How to install a specific version of an application](#46-how-to-install-a-specific-version-of-an-application)
+  - [5. Remove](#5-remove)
+    - [5.1. How to remove installed packages with apt-get](#51-how-to-remove-installed-packages-with-apt-get)
+    - [5.2. What is the difference between `apt-get remove` and `apt-get purge`?](#52-what-is-the-difference-between-apt-get-remove-and-apt-get-purge)
+  - [6. Clean](#6-clean)
+    - [6.1. How to clean your system with apt-get](#61-how-to-clean-your-system-with-apt-get)
 
 <!-- /TOC -->
 
@@ -39,11 +38,11 @@ URL: [Using apt-get Commands In Linux](https://itsfoss.com/apt-get-linux-guide/)
 
 There are **two main tool** around it: `apt-get` and `apt-cache`. `apt-get` is for installing, upgrading and cleaning packages while `apt-cache` is used for finding new packages. We’ll see all these commands with examples later in this guide.
 
-## 2. Using `apt-get` commands
 
-### 2.1. Update & Upgrade
 
-#### 2.1.1. Update package database with apt-get
+## 2. Update & Upgrade
+
+### 2.1. Update package database with apt-get
 
 `apt-get` basically works on a database of available packages. If you don’t update this database, the system won’t know if there are newer packages available or not. In fact, this is the first command you need to run in any Linux system after a fresh install.
 
@@ -63,7 +62,7 @@ You’ll see **three** types of lines, **hit**, **get** and **ign**. Let me expl
 - **ign**: the package is being ignored. There could be various reasons for that. Either the package is way too recent that it doesn’t even bother to check or there was an error in retrieving the file but error was trivial and thus it is being **ignored**. This is not an error. There is no need to be worried.
 - **get**: There is a new version available. It will download the information (not the package itself).
 
-#### 2.1.2. Upgrade installed packages with apt-get
+### 2.2. Upgrade installed packages with apt-get
 
 Once you have updated the package database, you can upgrade the installed packages. The most convenient way is to upgrade all the packages that have updates available. You can use the command below for this purpose:
 
@@ -87,7 +86,7 @@ sudo apt-get dist-upgrade
 
 This actually looks for the dependencies with the newer version and tries to install it. **But you should avoid using it**. I’ll explain it in the next section.
 
-#### 2.1.3. Difference between upgrade and dist-upgrade
+### 2.3. Difference between upgrade and dist-upgrade
 
 The command `apt-get upgrade` is very obedient. It never tries to remove any packages or tries to install a new package on its own.
 
@@ -97,7 +96,7 @@ It sounds like `dist-upgrade` is more powerful and intelligent, isn’t it? But 
 
 See, it has a ‘smart’ conflict resolution system. With that in place, it will attempt to upgrade the most important packages on the expense of the less important ones. This may lead to the removal of some packages which you might not want. **This is the main reason why `dist-upgrade` should be avoided on production machines**.
 
-#### 2.1.4. What is the difference between apt-get update and apt-get upgrade?
+### 2.4. What is the difference between apt-get update and apt-get upgrade?
 
 This is a very common confusion. You are not the only one to be confused by the term `update` and `upgrade`.
 
@@ -111,9 +110,9 @@ This is the reason why the fastest and the most convenient way to update **Ubunt
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
-### 2.2. Search
+## 3. Search
 
-#### 2.2.1. Using `apt-cache` commands to search for packages
+### 3.1. Using `apt-cache` commands to search for packages
 
 This comes pretty handy when you are looking for some specific lib. All you need to do is to use the following command. You don’t even need `sudo` here.
 
@@ -143,9 +142,9 @@ apt-cache showpkg <package_name>
 
 ![](images/Using-apt-get-commands-linux-02.jpg)
 
-### 2.3. Install
+## 4. Install
 
-#### 2.3.1. How to install new packages with apt-get
+### 4.1. How to install new packages with apt-get
 
 If you know the name of the package, you can easily install it using the command below:
 
@@ -163,7 +162,7 @@ The good thing about this command is that it has **auto-completion**. So if you 
 
 ![](images/Using-apt-get-commands-linux-10.jpg)
 
-#### 2.3.2. How to install multiple packages
+### 4.2. How to install multiple packages
 
 You are not restricted to install just one package at a time. You can install several packages at a time by providing their names:
 
@@ -174,11 +173,11 @@ sudo apt-get install <package_1> <package_2> <package_3>
 ![](images/Using-apt-get-commands-linux-11.jpg)
 
 
-#### 2.3.3. What if you run `install` on an already installed package
+### 4.3. What if you run `install` on an already installed package
 
 Suppose you have already a package installed but you used the install command for the already installed package. This will actually look into the database and if a newer version is found, **it will upgrade the installed package to the newer one**. So no harm done by using this command unless you don’t want it to be upgraded.
 
-#### 2.3.4. How to install packages without upgrading
+### 4.4. How to install packages without upgrading
 
 Suppose for some reason you want to install a package but don’t want to upgrade it if it is already installed. Sounds weird, but you may have your reasons to do that.
 
@@ -190,7 +189,7 @@ sudo apt-get install <package_name> --no-upgrade
 
 ![](images/Using-apt-get-commands-linux-09.jpg)
 
-#### 2.3.5. How to only upgrade packages, not install it
+### 4.5. How to only upgrade packages, not install it
 
 In case you only want to upgrade a package but don’t want to install it (if it’s not already installed), you can do that with the following command:
 
@@ -200,7 +199,7 @@ sudo apt-get install <package_name> --only-upgrade
 
 ![](images/Using-apt-get-commands-linux-07.jpg)
 
-#### 2.3.6. How to install a specific version of an application
+### 4.6. How to install a specific version of an application
 
 By default, the latest version available in the repository will be installed for any application. But for some reasons, if you don’t want to install the latest version, you can specify the version number (you would need to know the exact version number that you want to install).
 
@@ -210,9 +209,9 @@ All you need to do is to add `=version` with the name of the package.
 sudo apt-get install <package_name>=<version_number>
 ```
 
-### 2.4. Remove
+## 5. Remove
 
-#### 2.4.1. How to remove installed packages with apt-get
+### 5.1. How to remove installed packages with apt-get
 
 It’s not that you can only install packages with `apt-get`. You can also remove packages with it. All you need to do is to use the command in this manner:
 
@@ -228,7 +227,7 @@ Another way of uninstalling packages is to use `purge`. The command is used in t
 sudo apt-get purge <package_name>
 ```
 
-#### 2.4.2. What is the difference between `apt-get remove` and `apt-get purge`?
+### 5.2. What is the difference between `apt-get remove` and `apt-get purge`?
 
 - `apt-get` remove just removes the binaries of a package. It doesn’t touch the configuration files
 - `apt-get purge` removes everything related to a package including the configuration files
@@ -239,9 +238,9 @@ Purge is particularly useful when you have messed up with the configuration of a
 
 Most of the time, simple `remove` is more than enough for uninstalling a package.
 
-### 2.5. Clean
+## 6. Clean
 
-#### 2.5.1. How to clean your system with apt-get
+### 6.1. How to clean your system with apt-get
 
 Oh yes! You can also clean your system with `apt-get` and free up some disk space.
 
