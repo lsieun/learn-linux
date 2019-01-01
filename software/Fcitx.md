@@ -1,6 +1,22 @@
 # Fcitx(Free Chinese Input Toy of X)
 
-## Talk is Cheep
+<!-- TOC -->
+
+- [Fcitx(Free Chinese Input Toy of X)](#fcitxfree-chinese-input-toy-of-x)
+  - [1. Talk is Cheep](#1-talk-is-cheep)
+  - [2. Fcitx](#2-fcitx)
+    - [2.1. Fcitix Intro](#21-fcitix-intro)
+    - [2.2. Input method engines](#22-input-method-engines)
+    - [2.3. Input method module](#23-input-method-module)
+  - [3. Input method Framework and Engine](#3-input-method-framework-and-engine)
+  - [4. im-config](#4-im-config)
+  - [5. FAQ](#5-faq)
+    - [5.1. fcitx input method does not work on Xubuntu 16.04](#51-fcitx-input-method-does-not-work-on-xubuntu-1604)
+  - [6. Reference](#6-reference)
+
+<!-- /TOC -->
+
+## 1. Talk is Cheep
 
 要换fictx输入法，先删除ibus输入法。
 
@@ -32,7 +48,9 @@ im-config
 fcitx-config-gtk3
 ```
 
-## Fcitx Intro
+## 2. Fcitx
+
+### 2.1. Fcitix Intro
 
 **Fcitx** `[ˈfaɪtɪks]` is an input method framework with extension support. Currently it supports **Linux** and **Unix** systems like freebsd.
 
@@ -40,7 +58,39 @@ fcitx-config-gtk3
 
 > 这里说Fcitx是一个input method framework，是一个框架，那与input method到底是怎么整合到一起的呢？
 
-## Input method Framework and Engine
+### 2.2. Input method engines
+
+**Fcitx** provides **built-in input methods** for Chinese Pinyin and table-based input (for example Wubi).
+
+**Chinese**
+
+- **fcitx-sunpinyin**, based on sunpinyin. It strikes a good balance between speed and accuracy.
+- **fcitx-googlepinyin**, the Google pinyin IME for Android.
+- **fcitx-cloudpinyin** uses internet sources to provide input candidates.
+
+> SunPinyin是Sun亚洲研究中心为OpenSolaris开发的一套基于统计学语言模型的拼音输入法。
+
+**Japanese**
+
+- **fcitx-mozc**, based on Mozc, the Open Source Edition of Google Japanese Input.
+- **fcitx-kkc**, a Japanese Kana Kanji input engine, based on libkkc.
+- **fcitx-anthy**, a popular Japanese input engine. However, it is not actively developed anymore.
+
+> 这部分的目的是，Fcitx不仅支持中文，也支持日文。
+
+### 2.3. Input method module
+
+To obtain a better experience in **Gtk+** and **Qt** programs, install the `fcitx-gtk2`, `fcitx-gtk3`, `fcitx-qt4` and `fcitx-qt5` input method modules as your need, or the `fcitx-im` group to install all of them. 
+
+**Without those modules**, the input method may work on most applications but you may experience input method hang up, preview window screen location error or no preview error.
+
+Applications below do not use **Gtk+**/**Qt** input module:
+
+- Applications use Tk, motif or xlib
+- Emacs, Opera, OpenOffice, LibreOffice, Skype, Wine, Java, Xterm, urxvt, WPS
+
+
+## 3. Input method Framework and Engine
 
 There are two concepts to know, **input method framework** and **input method engine**:
 
@@ -61,38 +111,8 @@ The available **IM frameworks** are:
 - **SCIM** — The Smart Common Input Method platform.
 - **uim** — Multilingual input method framework to provide simple, easily extensible and high code-quality input method development platform, and useful input method environment for users of desktop and embedded platforms.
 
-## Fcitx Input method engines
 
-**Fcitx** provides **built-in input methods** for Chinese Pinyin and table-based input (for example Wubi).
-
-**Chinese**
-
-- **fcitx-sunpinyin**, based on sunpinyin. It strikes a good balance between speed and accuracy.
-- **fcitx-googlepinyin**, the Google pinyin IME for Android.
-- **fcitx-cloudpinyin** uses internet sources to provide input candidates.
-
-> SunPinyin是Sun亚洲研究中心为OpenSolaris开发的一套基于统计学语言模型的拼音输入法。
-
-**Japanese**
-
-- **fcitx-mozc**, based on Mozc, the Open Source Edition of Google Japanese Input.
-- **fcitx-kkc**, a Japanese Kana Kanji input engine, based on libkkc.
-- **fcitx-anthy**, a popular Japanese input engine. However, it is not actively developed anymore.
-
-> 这部分的目的是，Fcitx不仅支持中文，也支持日文。
-
-## Input method module
-
-To obtain a better experience in **Gtk+** and **Qt** programs, install the `fcitx-gtk2`, `fcitx-gtk3`, `fcitx-qt4` and `fcitx-qt5` input method modules as your need, or the `fcitx-im` group to install all of them. 
-
-**Without those modules**, the input method may work on most applications but you may experience input method hang up, preview window screen location error or no preview error.
-
-Applications below do not use **Gtk+**/**Qt** input module:
-
-- Applications use Tk, motif or xlib
-- Emacs, Opera, OpenOffice, LibreOffice, Skype, Wine, Java, Xterm, urxvt, WPS
-
-## im-config
+## 4. im-config
 
 `im-config` provides the framework to **configure the input method** on X Window System with GTK GUI or console terminal dialogue. 
 
@@ -122,15 +142,15 @@ $ im-config -l
 
 This **input method** is the essential mechanism for **Chinese**, **Japanese** and **Korean** (**CJK**) languages to enter their non-ASCII native characters. This is also useful to support specialized keyboard bindings for other non-European languages such as Indic and other Asian languages.
 
-## FAQ
+## 5. FAQ
 
-### fcitx input method does not work on Xubuntu 16.04
+### 5.1. fcitx input method does not work on Xubuntu 16.04
 
 URL: https://askubuntu.com/questions/843698/fcitx-input-method-does-not-work-on-xubuntu-16-04
 
 Try `rm -rf ~/.config/fcitx` and restart ubuntu, this fixed me at least, on xubuntu 16.04
 
-## Reference
+## 6. Reference
 
 - [Install Chinese Fcitx Wbpy Input Method on Debian 8 Gnome Desktop](https://www.linuxbabe.com/desktop-linux/install-chinese-fcitx-wbpy-input-method-on-debian-8-gnome-desktop)
 - [Linux input method framework brief summary](https://blogs.gnome.org/happyaron/2011/01/15/linux-input-method-brief-summary/)

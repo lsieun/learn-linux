@@ -1,7 +1,3 @@
-# firewall
-
-CentOS 7.0默认使用的是firewall作为防火墙，使用iptables必须重新设置一下
-
 ## 1、直接关闭防火墙
 
 ```bash
