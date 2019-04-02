@@ -29,8 +29,24 @@ the options for `lecture` are: `always`, `never` and `once`.
 
 Now close Terminal, Reopen it and try to do something with `sudo`.
 
+## Allow An Unprivileged User To Run A Certain Command With Sudo
 
+- [Allow An Unprivileged User To Run A Certain Command With Sudo](https://www.atrixnet.com/allow-an-unprivileged-user-to-run-a-certain-command-with-sudo/)
 
+First, you’ll need to use the `visudo` utility…
 
+```bash
+sudo visudo
+```
 
+This command safely opens up the `/etc/sudoers` file for you in your default editor. Let’s say you want to allow a user named “joe” to run a given command. You just need to add a line like this below (customize for your needs)
 
+```txt
+joe ALL=(ALL) NOPASSWD: /full/path/to/command
+```
+
+Now what if you want to restrict joe to only use that command within a given set of parameters or with only certain arguments? Well, just toss them in there too! Check this out:
+
+```txt
+joe ALL=(ALL) NOPASSWD: /full/path/to/command ARG1 ARG2
+```

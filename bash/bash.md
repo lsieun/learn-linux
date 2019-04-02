@@ -77,10 +77,10 @@ Text Terminals send characters (bytes), not key strokes.
 Special keys such as `Tab`, `Backspace`, `Enter` and `Esc` are encoded as control characters. 
 Control characters are not printable, they display in the terminal as `^` and are intended to have an effect on applications.
 
-`Ctrl+I` = `Tab`
-`Ctrl+J` = `Newline`
-`Ctrl+M` = `Enter`
-`Ctrl+[` = `Escape`
+- `Ctrl+I` = `Tab`
+- `Ctrl+J` = `Newline`
+- `Ctrl+M` = `Enter`
+- `Ctrl+[` = `Escape`
 
 
 
