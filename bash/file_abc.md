@@ -1,12 +1,10 @@
-
 # file
 
 <!-- TOC -->
 
-- [file](#file)
-    - [1. Linux文件类型](#1-linux文件类型)
-    - [2. Linux文件时间](#2-linux文件时间)
-    - [3. file命令](#3-file命令)
+- [1. Linux文件类型](#1-Linux%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B)
+- [2. Linux文件时间](#2-Linux%E6%96%87%E4%BB%B6%E6%97%B6%E9%97%B4)
+- [3. file命令](#3-file%E5%91%BD%E4%BB%A4)
 
 <!-- /TOC -->
 
@@ -18,15 +16,12 @@ Linux文件类型:
 - 2.目录文件    标识 `d`
 - 3.套接字文件  socket 让两个进程进行通信，使用软件模拟的设备   标识 `s`
 - 4.命名管道 pipe  标识 `p`
-- 5.链接文件    
+- 5.链接文件
     - 软链接 标识 `l`
     - 硬链接 标识 `-`
 - 6.特殊文件，用于作为硬件设备访问的文件
     - 块设备，例如硬盘  读取是随机的  按块读取   标识 `b`
     - 字符设备 有前后顺序    标识 `c`
-
-
-
 
 | 文件类型     | 标识                 | 说明                                                         |
 | ------------ | -------------------- | ------------------------------------------------------------ |
@@ -37,7 +32,6 @@ Linux文件类型:
 | 链接文件     | 软链接`l`<br/>硬链接`-`   | 硬链接的标识 与 普通文件的标识是一样的。 |
 | 特殊文件     | 块设备`b`<br/>字符设备`c` | 用于作为硬件设备访问的文件。<br/>块设备，例如硬盘  读取是随机的  按块读取。<br/>字符设备 有前后顺序。 |
 
-
 ```bash
 $ ls -l /run
 
@@ -47,7 +41,6 @@ srw-rw-rw-  1 root    root       0 Sep 18 08:33 secrets.socket     # 套接字�
 prw-------  1 root    root       0 Sep 18 08:33 dmeventd-client    # 命名管道pipe
 prw-------  1 root    root       0 Sep 18 08:33 dmeventd-server
 ```
-
 
 ```bash
 $ ls -l /dev
@@ -82,7 +75,7 @@ crw-rw-rw-   1 root   tty         5,     0 Sep 23 16:55 tty     # 字符设备
 查看文件三个时间的命令是`stat`，示例如下：
 
 ```bash
-$ stat diary.txt 
+$ stat diary.txt
 
   File: diary.txt
   Size: 8         	Blocks: 8          IO Block: 4096   regular file
