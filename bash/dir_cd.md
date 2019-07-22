@@ -12,7 +12,6 @@ cd is a shell builtin
 - 使用`cd -`代替`cd $OLDPWD`
 - 对于常用的目录使用`alias`，例如：`alias cdnet='cd /etc/sysconfig/network-scripts'`
 
-
 ```bash
 cd -
 ```

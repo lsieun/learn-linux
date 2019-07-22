@@ -1,6 +1,17 @@
 # 命令别名alias
 
-[TOC]
+<!-- TOC -->
+
+- [1. alias是内置命令](#1-alias%e6%98%af%e5%86%85%e7%bd%ae%e5%91%bd%e4%bb%a4)
+- [2. 查看alias](#2-%e6%9f%a5%e7%9c%8balias)
+- [3. 定义alias](#3-%e5%ae%9a%e4%b9%89alias)
+- [4. 取消alias](#4-%e5%8f%96%e6%b6%88alias)
+- [5. 调用命令本身](#5-%e8%b0%83%e7%94%a8%e5%91%bd%e4%bb%a4%e6%9c%ac%e8%ba%ab)
+- [6. 保存alias命令：对当前用户有效](#6-%e4%bf%9d%e5%ad%98alias%e5%91%bd%e4%bb%a4%e5%af%b9%e5%bd%93%e5%89%8d%e7%94%a8%e6%88%b7%e6%9c%89%e6%95%88)
+- [7. 保存alias命令：对所有用户有效](#7-%e4%bf%9d%e5%ad%98alias%e5%91%bd%e4%bb%a4%e5%af%b9%e6%89%80%e6%9c%89%e7%94%a8%e6%88%b7%e6%9c%89%e6%95%88)
+- [8. Demo](#8-demo)
+
+<!-- /TOC -->
 
 ## 1. alias是内置命令
 
@@ -29,7 +40,7 @@ alias ls='ls --color=auto'
 
 alias定义命令别名的语法：
 
-```
+```bash
 alias cmdalias='command [option] [argument]'
 ```
 
@@ -153,4 +164,3 @@ alias eclimd='~/Software/jee-photon/eclipse/eclimd'
 alias mvnp='mvn clean package -Dmaven.test.skip=true'
 alias jj='java -jar'
 ```
-
