@@ -19,7 +19,7 @@ date 查看日期
 	[root@mini ~]# date
 	Tue Oct 24 11:26:42 CST 2017
 
-查看昨天的时间 
+查看昨天的时间
 
 	date -d yesterday
 

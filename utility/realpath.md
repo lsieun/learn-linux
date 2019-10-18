@@ -1,7 +1,7 @@
 # realpath
 
 ```bash
-$ realpath test.sh 
+$ realpath test.sh
 
 /home/liusen/workdir/dummy/test.sh
 ```

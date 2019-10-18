@@ -29,3 +29,21 @@ $ sudo dnf install unar
 ```
 
 The Archive Manager (gui application) will be able to open `.rar` files.
+
+```bash
+sudo apt install unrar rar
+```
+
+## Create
+
+```bash
+rar a myfile hello.txt
+```
+
+> 注意：myfile不需要添加`.rar`的后缀
+
+## Extract
+
+```bash
+rar x myfile.rar
+```

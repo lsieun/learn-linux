@@ -1,6 +1,16 @@
 # The Best Keyboard Shortcuts for Bash
 
-[TOC]
+<!-- TOC -->
+
+- [1. Working With Processes](#1-working-with-processes)
+- [2. Controlling the Screen](#2-controlling-the-screen)
+- [3. Moving the Cursor](#3-moving-the-cursor)
+- [4. Cutting and Pasting](#4-cutting-and-pasting)
+- [5. Deleting Text](#5-deleting-text)
+- [6. emacs vs. vi Keyboard Shortcuts](#6-emacs-vs-vi-keyboard-shortcuts)
+- [7. Special keys: Tab, Backspace, Enter, Esc](#7-special-keys-tab-backspace-enter-esc)
+
+<!-- /TOC -->
 
 ```bash
 echo $SHELL
@@ -54,7 +64,7 @@ Use the following shortcuts to quickly delete characters:
 
 Alt+D: Delete all characters after the cursor on the current line.
 
-## emacs vs. vi Keyboard Shortcuts
+## 6. emacs vs. vi Keyboard Shortcuts
 
 The above instructions assume you’re using the default keyboard shortcut configuration in `bash`. By default, `bash` uses `emacs`-style keys. If you’re more used to the `vi` text editor, you can switch to `vi`-style keyboard shortcuts.
 
@@ -70,27 +80,14 @@ The following command will put bash back into the default emacs mode:
 set -o emacs
 ```
 
-
-## Special keys: Tab, Backspace, Enter, Esc
+## 7. Special keys: Tab, Backspace, Enter, Esc
 
 Text Terminals send characters (bytes), not key strokes. 
-Special keys such as `Tab`, `Backspace`, `Enter` and `Esc` are encoded as control characters. 
+Special keys such as `Tab`, `Backspace`, `Enter` and `Esc` are encoded as control characters.
+
 Control characters are not printable, they display in the terminal as `^` and are intended to have an effect on applications.
 
 - `Ctrl+I` = `Tab`
 - `Ctrl+J` = `Newline`
 - `Ctrl+M` = `Enter`
 - `Ctrl+[` = `Escape`
-
-
-
-
-
-
-
-
-
-
-
-
-

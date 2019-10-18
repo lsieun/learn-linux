@@ -15,7 +15,7 @@ DESCRIPTION
 Cowsay generates an ASCII picture of a cow saying something provided by the user. If run with no arguments, it accepts standard input, word-wraps the message given at about 40 columns, and prints the cow saying the given message on standard output.
 
 ```bash
-$ cowsay "Hello World"
+cowsay "Hello World"
 ```
 
 Output:

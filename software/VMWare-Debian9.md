@@ -12,14 +12,14 @@
 修改主机名使用如下命令：
 
 ```bash
-vi /etc/sysconfig/network
+## Debian
+vi /etc/hostname
 ```
 
 修改其中的`HOSTNAME`:
 
 ```txt
-NETWORKING=yes
-HOSTNAME=MyClient
+MyServer
 ```
 
 ### 1.2 网卡地址 ###

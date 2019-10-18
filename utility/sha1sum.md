@@ -26,10 +26,10 @@ sha1sum {file} > {file}.sha1
 
 ## 检查文件的sha1值是否正确
 
-
 ```bash
 sha1sum -c {file}.sha1
 ```
+
 It should show OK if the sha1 is correct.
 
 

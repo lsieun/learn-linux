@@ -14,7 +14,6 @@ As a result, after reading this tutorial, you will have learned how to:
 - Use `ssh` to run commands (such as backup scripts) on your remote servers without using a password.
 - Use `scp` to copy files to and from your remote servers without a password.
 
-
 ## 1. Generate a public and private key pair
 
 ```bash
@@ -52,7 +51,6 @@ Feel free to use `vi` or `cat` to look at both files if you like, but don't chan
 You should **never** give **your private key** to anyone else, so for all intents and purposes, the `id_rsa` file will just stay right where it is.
 
 As for your **public key** (`id_rsa.pub`), you're going to copy that to your remote servers in the following step.
-
 
 ## 2. Copy your public key to your remote servers
 

@@ -5,7 +5,8 @@ Linus Torvalds wrote the first Linux kernel in 1991 and it continues to be activ
 这里讲了Linux的第一版时间：
 
 - （1） 第一版的Linux是在1991年。
-- （2） 此时，我联想到了Java，第一版Java发布是在1995年。
+- （2） 第一版的Unix是1969年。
+- （3） 此时，我联想到了Java，第一版Java发布是在1995年。
 
 
 

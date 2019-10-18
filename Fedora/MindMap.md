@@ -8,7 +8,7 @@ Labyrinth may not be intuitive at first. However, it is intended to be lightweig
 Installation is easy using `dnf` along with the `sudo` command:
 
 ```bash
-$ sudo dnf install labyrinth
+sudo dnf install labyrinth
 ```
 
 

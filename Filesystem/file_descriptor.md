@@ -27,9 +27,8 @@ When **a process** makes a successful request to **open a file**, **the kernel**
 ![](images/file-descriptor.jpg)
 
 ## Stdin, stdout, and stderr
+
 On a Unix-like operating system, the first three file descriptors, by default, are `STDIN` (standard input), `STDOUT` (standard output), and `STDERR` (standard error).
-
-
 
 | Name            | File descriptor | Descripton                                                   | Abbrevation |
 | --------------- | --------------- | ------------------------------------------------------------ | ----------- |
@@ -46,7 +45,8 @@ For example, when you use the `find` command, successful output goes to `stdout`
 ```bash
 find / -name '*something*'
 ```
-```
+
+```txt
 /usr/share/doc/something
 /usr/share/doc/something/examples/something_random
 find: `/run/udisks2': Permission denied
@@ -63,7 +63,7 @@ You can hide `stderr` by redirecting file descriptor 2 to `/dev/null`, the speci
 find / -name '*something*' 2>/dev/null
 ```
 
-```
+```txt
 /usr/share/doc/something
 /usr/share/doc/something/examples/something_random
 /usr/share/something

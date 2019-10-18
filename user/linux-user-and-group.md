@@ -121,13 +121,13 @@ sudo visudo
 Linux uses groups as a way to organize users. Groups organize collections of accounts, primarily as a security measure. Control of group membership is administered through the `/etc/group` file, which shows a list of groups and its members. **Every user has a default or primary group**. When a user logs in, the group membership is set for their primary group. This means that when a user launches a program or creates a file, both the file and the running program will be associated with the user’s current group membership. A user may access other files in other groups, as long as they are also a member of that group and the access permissions are set. To run programs or create a file in a different group, the user must run the `newgrp` command to switch their current group. A sample of the `newgrp` command is as follows:
 
 ```bash
-$ newgrp <marketing>
+newgrp <marketing>
 ```
 
 If the user entering the above-referenced command is a member of the **marketing** group in the `/etc/group` file, then the current group membership will change. It is important to note that any files created will now be associated with the **marketing** group rather than the user’s primary group. Users may also change their group by using the `chgrp` command. The syntax for the `chgrp` command is as follows:
 
 ```bash
-$ chgrp <newgroup>
+chgrp <newgroup>
 ```
 
 ### 2.4 Creating and Removing Directories
@@ -260,7 +260,7 @@ dr--r--r-- 2 user user 4096 Dec 17 14:38 Work
 
 An octal table showing the numeric equivalent for permissions is provided below.
 
-![](https://www.linode.com/docs/tools-reference/linux-users-and-groups/1487-numeric-permissions.png)
+![numeric-permissions](images/numeric-permissions.png)
 
 ### 2.8 Additional File Permissions
 
@@ -293,21 +293,4 @@ To set the setuid (user id) for a directory named /var/doc-store, issue the foll
 ```bash
 chmod u+s /var/doc-store/
 ```
-
-### 2.9 Changing File Ownership
-
-By default, all files are “owned” by the user who creates them and by that user’s default group. To change the ownership of a file, use the `chown` command in the `chown user:group /path/to/file` format. In the following example, the ownership of the “list.html” file will be changed to the “cjones” user in the “marketing” group:
-
-```bash
-chown cjones:marketing list.html
-```
-
-To change the ownership of a directory and all the files contained inside, use the recursive option with the `-R` flag. In the following example, change the ownership of `/srv/smb/leadership/` to the “cjones” user in the “marketing” group:
-
-```bash
-chown -R cjones:marketing /srv/smb/leadership/
-```
-
-
-
 
