@@ -11,7 +11,7 @@ There are two major components of Linux, **the kernel** and **the shell**. **The
 > （2）kernel主要负责与“非人”的事物打交道，例如：抽象概念（进程、文件）和硬件（CPU、内存、IO设备）。  
 > （3）shell是“人”与kernel之间桥梁，接收用户的输入，然后交给kernel处理；kernel处理完成后，把结果返回给shell，由shell呈现给用户。
 
-**Shell** is basically Bridge between **kernel** and **the user**, **a Command Interpreter** where user can type command and the command is conveyed to the kernel and it will be executed. 
+**Shell** is basically Bridge between **kernel** and **the user**, **a Command Interpreter** where user can type command and the command is conveyed to the kernel and it will be executed.
 
 ![](images/kernel_shell_user_input.jpg)
 
@@ -27,11 +27,13 @@ Basically **the kernel** is the center of the operating system that manages ever
 
 ![](images/main_components_of_linux_os.png)
 
-Kernel is “the Linux” itself. It’s a bunch of code that deals with networking, managing memory, talking to hardware devices such as disks, graphics cards, mouse, and so on. It also knows how the contents of a disk is organized in files, and how to open files and read/write data into them. However from user’s perspective, kernel is silent and invisible. It just sits there and does nothing useful by itself. Its sole purpose is to provide the “magic” where programs can run and interact with each other and the hardware. The Linux kernel was initially written by Linus Torvalds.
+Kernel is “the Linux” itself. It’s a bunch of code that deals with networking, managing memory, talking to hardware devices such as disks, graphics cards, mouse, and so on. It also knows how the contents of a disk is organized in files, and how to open files and read/write data into them. However from user’s perspective, kernel is silent and invisible. It just sits there and does nothing useful by itself. Its sole purpose is to provide the “magic” where programs can run and interact with each other and the hardware.
 
 A shell, on the other hand, is a program that you use to interact with a computer by typing commands.Shell reads your commands and executes them one after another. For example, if you type “cp file1 file2”, shell understands that you want to copy a file. On your behalf, it then calls one or more kernel functions to create file2, open file1 for reading, read chunks of data from it, write chunks of data to file2, and finally to close both files. Similarly, ff you type “rm file3”, shell will call one or more kernel functions to do that, and so on. If something goes wrong (file not found etc.), shell will print the error. A shell is also used to start other programs. If you type a command that shell itself doesn’t understand, it will search a list of predetermined directories ($PATH) and try to find a program with that name. Instead of typing commands over and over, you can also write them into a file (called a shell script), and the shell will treat them as new programs/commands.
 
-In a running Linux system, there is always exactly one running kernel. But you can have zero, one or more shells running in parallel. There are many different shells, such as bash, zsh, ksh and so on, each with its own strengths and weaknesses. As far as I know, bash is the most popular. You can learn more about it if you type “man bash”.
+## 从数量角度，对比Shell和Kernel
+
+In a running Linux system, there is always **exactly one running kernel**. But you can have zero, **one or more shells** running in parallel. There are many different shells, such as `bash`, `zsh`, `ksh` and so on, each with its own strengths and weaknesses. As far as I know, `bash` is the most popular. You can learn more about it if you type “man bash”.
 
 ![](images/multi-shells_kernel.svg)
 

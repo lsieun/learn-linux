@@ -30,6 +30,16 @@ date +"%FORMAT-%FORMAT"
 
 An operand with **a leading plus** (`+`) sign signals **a user-defined format string** which specifies the format in which to display the date and time. The following examples are tested on GNU/Linux, Apple OS X Unix, and FreeBSD unix operating system.
 
+```bash
+$ date +%F
+2019-10-18
+
+$ date +%T
+12:22:10
+
+$ date +"%F %T"
+2019-10-18 12:22:32
+```
 
 ## Examples
 
