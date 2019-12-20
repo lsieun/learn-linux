@@ -32,6 +32,11 @@ Copying, removing, and updating files and directories
 
 Finding files using `find` and `locate`
 
+拼接文件和撕裂文件
+
+- cat
+- split
+
 Compressing files using `ZIP` and `TAR`
 
 

@@ -154,9 +154,9 @@ Think if there is no cheat-sheet available which you looking at particularly don
 
 ```bash
 $ cheat -e arkit
-
-You must set a CHEAT_EDITOR, VISUAL, or EDITOR environment variable in order to create/edit a cheatsheet.
 ```
+
+You must set a `CHEAT_EDITOR`, `VISUAL`, or `EDITOR` environment variable in order to create/edit a cheatsheet.
 
 Edit `~/.bashrc` using any text editor and add 
 

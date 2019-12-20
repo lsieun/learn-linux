@@ -4,7 +4,7 @@ URL:
 
 - https://turbofuture.com/computers/Run-process-in-background-linux-terminal
 
-If you’re like me and you started to hate clicking icons to launch projects, you start them from the shell. 
+If you’re like me and you started to hate clicking icons to launch projects, you start them from the shell.
 
 > Terminal -> Start Process
 
